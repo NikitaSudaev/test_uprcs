@@ -1,0 +1,51 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.paginator {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  margin: 0 auto;
+  border: 1px solid #E6EAF5;
+  border-radius: 5px;
+  height: 27px;
+  overflow: hidden;
+  background-color: #FCFCFC;
+}
+
+.button {
+  position: relative;
+  cursor: pointer;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.button:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background-color: #E6EAF5;
+  top: 0;
+  right: -0.5px;
+}
+
+.button:last-of-type, .button:first-of-type {
+  width: 27px;
+}
+
+.buttonActive {
+  background-color: #F3F5F9;
+  pointer-events: none;
+}
+
+.buttonDisabled {
+  cursor: default;
+  pointer-events: none;
+}

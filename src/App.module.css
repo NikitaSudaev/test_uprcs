@@ -1,0 +1,105 @@
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+  max-height: 100vh;
+  flex-direction: column;
+  align-items: stretch;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.mainContentWrapper {
+  padding-bottom: 30px;
+}
+
+.errorContainer {
+  padding: 20px;
+  color: #F00;
+  font-size: 16px;
+  text-align: center;
+}
+
+.results {
+  display: grid;
+  grid-template-columns: repeat(2, 142px);
+  column-gap: 8px;
+  row-gap: 12px;
+  justify-content: space-evenly;
+  padding: 20px 0;
+}
+
+@media all and (min-width: 460px) {
+  .results {
+    grid-template-columns: repeat(3, 142px);
+    justify-content: space-between;
+  }
+  .errorContainer {
+    font-size: 22px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .cardImgWrapper {
+    width: 142px;
+    height: 156px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .results {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 30px 0;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .results {
+    grid-template-columns: repeat(4, 245px);
+    row-gap: 40px;
+    padding: 40px 0;
+  }
+}
+
+.searchData {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  padding: 8px 0;
+}
+
+.resultsCount {
+  display: block;
+  font-size: 12px;
+  line-height: 1;
+  color: #fff;
+  padding: 3px 6px;
+  border-radius: 3px;
+  background-color: #6627FF;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@media all and (min-width: 768px) {
+  .searchData {
+    font-size: 22px;
+    column-gap: 17px;
+    row-gap: 12px;
+  }
+  .resultsCount {
+    font-size: 14px;
+    padding: 5px 15px;
+    border-radius: 5px;
+  }
+}
+
+.searchRequest {
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.scrollBlocked {
+  overflow: hidden;
+  user-select: none;
+}

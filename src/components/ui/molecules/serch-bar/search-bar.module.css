@@ -1,0 +1,45 @@
+.searchbar {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 10px 15px;
+  height: 40px;
+  width: 280px;
+  border: 1px solid #E6EAF5;
+  border-radius: 5px;
+  background-color: #FCFCFF;
+  column-gap: 12px;
+}
+
+.input {
+  flex-grow: 1;
+  font-family: 'Gilroy', 'Poppins', sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #929BBC;
+  border: none;
+  outline: none;
+  padding: 0;
+  background-color: transparent;
+}
+.input::placeholder {
+  color: #929BBC;
+}
+
+.button {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border: none;
+  background-image: url(../../../../assets/icons/icon-search.png);
+  background-size: contain;
+  background-position: center;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.buttonDisabled {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.2;
+}
